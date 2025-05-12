@@ -1,21 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello</title>
+    <title>BULMA TEST</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
 </head>
 <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
+
+    <!-- Navigation -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+          <img src="images/jt1.png" alt="logo">
+      </a>
+
+      <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item"> 
+            <a class="navbar-item" href="#">Home</a>
+            <a class="navbar-item" href="#">About</a>
+            <a class="navbar-item" href="#">Performances</a>
+            <a class="navbar-item" href="#">Gallery</a>
+            <a class="navbar-item" href="#">Video</a>
+            <a class="navbar-item" href="#">Contact</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </nav>
+
+  </div>
+
+    <!-- Hero Section -->
+  <section id="heroimage" class="hero is-medium has-background-dark">
+    <div class="hero-body has-text-centered">
+      <p class="title is-1 is-spaced">
+        JuggleTime
+      </p>
+      <p class="subtitle has-text-white">
+        Welcome to JuggleTime, where precision meets performance. Experience world-class juggling, dynamic movement, and an unforgettable stage presence.
+      </p>
+      <p class="subtitle has-text-white">
+        With over 13 years of professional experience, JuggleTime brings energy, rhythm, and spectacle to every performance. From high-energy burlesque to mesmerizing juggling, each act is a showstopper.
+      </p>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <p class="title is-4 has-text-left is-spaced has-text-white">
+              Bio
+            </p>
+            <p class="subtitle has-text-left has-text-white">
+              Logan Goethe is among the world's best jugglers.
+            </p>
+            <p class="subtitle has-text-left has-text-white">
+              From the fundamentals to the far reaches, grasp of contact juggling technique has earned him places as a coveted instructor and performer across the United States and countries beyond.
+            </p>
+          </div>
+          <div class="subtitle is-one-third has-text-white">
+            <br>
+            <br>
+            <p>Logan Goethe is among the world's best jugglers.</p>
+          </div>
+        </div>
+      </div>    
+      <br>
+      <br>
+      <!-- Performance Options -->
+      <div class="columns">
+        <div class="column is-one-third">          
+          <div class="box box-transparency">
+            <p class="title is-5 is-spaced">
+              STAGE
+            </p>
+            <p class="subtitle is-6 has-text-white">
+              From the backyard to the bigtop Logan has wowed audience on every size of stage
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box box-transparency">
+            <p class="title is-5 is-spaced">
+              AMBIENCE
+            </p>
+            <p class="subtitle is-6 has-text-white">
+              Ambience of all kinds
+            </p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="box box-transparency">
+            <p class="title is-5 is-spaced">
+              FIRE
+            </p>
+            <p class="subtitle is-6 has-text-white">
+              Well-known among fire spinners, Logan is adept with juggling the infamous torches. A previous resident artist at one of the world’s most famous fire-spinning collectives, he’s within arm’s reach of as many fire spinners as you need, guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="columns" id="gallery">
+      <div class="column is-one-third">
+        <div class="box box-transparency">
+          <figure class="image">
+            <img class="clickable-image" src="images/gallery1.jpg" data-full="images/gallery1.jpg" data-index="0"alt="Image 1">
+          </figure>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="box box-transparency">
+          <figure class="image">
+            <img class="clickable-image" src="images/gallery2.jpg" data-full="images/gallery2.jpg" data-index="1" alt="Image 2">
+          </figure>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="box box-transparency">
+          <figure class="image">
+            <img class="clickable-image" src="images/gallery3.jpg" data-full="images/gallery3.jpg" data-index="2" alt="Image 3">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Modal for Gallery -->
+<div class="modal" id="imageModal">
+  <div class="modal-background"></div>
+  <div class="modal-content has-text-centered">
+    <span class="modal-prev has-text-white" style="font-size: 3rem; position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); cursor: pointer;">&#10094;</span>
+    
+    <img id="modalImage" class="zoom-animate" src="" alt="" style="max-height: 90vh;">
+    
+    <span class="modal-next has-text-white" style="font-size: 3rem; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); cursor: pointer;">&#10095;</span>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+
+
+  <!-- 
+  <section class="section has-background-info">
+    <div class="columns is-variable is-3" id="gallery">
+      <div class="column">
+        <figure class="image">
+          <img id="myImage" src="images/gallery1.jpg" style="cursor: pointer;" alt="Click to enlarge">
+      </div>
+      <div class="modal" id="imageModal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image">
+          <img src="images/gallery1.jpg" id="modalImage" alt="Full image">
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </figure>
+    </div>
+    <div class="column">
+      <figure class="image">
+        <img id="myImage" src="images/gallery1.jpg" style="cursor: pointer;" alt="Click to enlarge">
+      
+    </div>
+    <div class="modal" id="imageModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image">
+        <img src="images/gallery1.jpg" id="modalImage" alt="Full image">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </figure>
+  </div>
+  
+  </section>  
+  
+-->
+
+  <!-- Video -->
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2025 MySite. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>

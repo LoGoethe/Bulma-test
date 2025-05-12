@@ -1,1 +1,110 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+* {
+    
+}
+
+.hero {
+    background: url(images/hero1.png) center / cover;
+    background-attachment: fixed; 
+}
+
+
+#heroimage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+}
+
+
+
+/*
+#heroimage {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+#heroimage::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("images/hero1.png") no-repeat center/cover; 
+    background-attachment: fixed; 
+    z-index: -1;
+  }
+
+  #heroimage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+  }
+*/
+
+/* gallery images */
+#gallery img {
+    border-radius: 10px;
+}
+
+.clickable-image {
+  cursor: pointer;
+}
+
+.clickable-image:hover {
+  transition: opacity 0.3s ease-in-out;
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* Make modal image bigger */
+  #imageModal .modal-content {
+    width: 95vw;
+    height: 95vh;
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #imageModal img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  }
+
+  /* modal prev and next buttons */
+  .modal-prev,
+  .modal-next {
+    z-index: 1001; /* So they’re on top of the image */
+  }
+
+  .zoom-animate {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .zoom-animate.show {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+/* boxes behind text transparency */
+.box-transparency {
+    background-color: rgba(10, 92, 88, 0.322);
+}
+
